@@ -70,6 +70,7 @@
 import React, { useState, useEffect } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import Link from '../components/Link';
+import Navbar from '../components/Navbar';
 // import Search from '../components/Search';
 
 function Links() {
@@ -132,7 +133,7 @@ function Links() {
 
           <AiOutlineSearch className="search-icon" onClick={() => handleSearch(query)} /> {/* Search on icon click */}
         </div>
-        <p  style={{justifyContent:"center",display: "flex",color: 'grey'}}>{data.length} Results found</p> 
+        <p  style={{justifyContent:"center",display: "flex",color: 'grey',fontSize: "0.8rem"}}>{data.length} Results found</p> 
         <div className="links">
           {filteredData.map((item, index) => (
             <Link key={index} linkData={item} />

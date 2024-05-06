@@ -2,13 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Links from './pages/Links'
-
+import Home from './pages/Home.jsx'
+import Links from './pages/Links.jsx'
 function App() {
 
   return (
     <>
-        <Links/>
+        <Home/>
     </>
   )
 }
