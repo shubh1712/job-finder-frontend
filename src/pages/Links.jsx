@@ -100,7 +100,7 @@ function Links() {
 
   const fetchData = () => {
     // Make a GET request to your endpoint
-    fetch('http://127.0.0.1:5000/get_chat_data')
+    fetch('https://shubhuj17.pythonanywhere.com/get_chat_data')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
