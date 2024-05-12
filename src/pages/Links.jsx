@@ -109,16 +109,28 @@ function Links() {
         return response.json();
       })
       .then((data) => {
+        // Remove duplicates from the fetched data based on the 'text' field
+        const uniqueData = removeDuplicates(data, 'text');
+        
         // Set the fetched data to the state
-        setData(data);
-        setFilteredData(data); // Initially, display all data
-        console.log(data.links);
+        setData(uniqueData);
+        setFilteredData(uniqueData); // Initially, display all unique data
+        console.log(uniqueData.links);
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
   };
-
+  
+  // Function to remove duplicates from an array of objects based on a specific key
+  const removeDuplicates = (array, key) => {
+    return array.filter((item, index, self) =>
+      index === self.findIndex((t) => (
+        t[key] === item[key]
+      ))
+    );
+  };
+  
   return (
     <div className="main">
       <div className="containers">
