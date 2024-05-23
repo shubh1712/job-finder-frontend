@@ -101,7 +101,7 @@ function Links() {
 
   const fetchData = () => {
     // Make a GET request to your endpoint
-    fetch('https://shubhuj17.pythonanywhere.com/get_chat_data')
+    fetch('https://job-finder-backend-1-hcz4.onrender.com/get_chat_data')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
